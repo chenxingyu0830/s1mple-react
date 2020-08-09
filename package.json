@@ -1,0 +1,20 @@
+{
+  "name": "s1mple-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenxingyu0830/s1mple-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenxingyu0830/s1mple-react/issues"
+  },
+  "homepage": "https://github.com/chenxingyu0830/s1mple-react#readme"
+}
