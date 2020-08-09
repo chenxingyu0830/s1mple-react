@@ -1,27 +1,36 @@
 {
-  "name": "s1mple-react",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chenxingyu0830/s1mple-react.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/chenxingyu0830/s1mple-react/issues"
-  },
-  "homepage": "https://github.com/chenxingyu0830/s1mple-react#readme",
-  "devDependencies": {
-    "awesome-typescript-loader": "^5.2.1",
-    "typescript": "^3.9.7",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
-  }
+	"name": "s1mple-react",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "webpack-dev-server",
+		"build": "webpack"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/chenxingyu0830/s1mple-react.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/chenxingyu0830/s1mple-react/issues"
+	},
+	"homepage": "https://github.com/chenxingyu0830/s1mple-react#readme",
+	"devDependencies": {
+		"@types/react": "^16.9.45",
+		"@types/react-dom": "^16.9.8",
+		"awesome-typescript-loader": "^5.2.1",
+		"html-webpack-plugin": "^4.3.0",
+		"typescript": "^3.9.7",
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12",
+		"webpack-dev-server": "^3.11.0"
+	},
+	"dependencies": {
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1"
+	}
 }
