@@ -4,4 +4,4 @@ import Icon from "./icon"
 
 ReactDom.render(<div>
     <Icon name="weChat" />
-</div>, document.body)
+</div>, document.querySelector('#root'));

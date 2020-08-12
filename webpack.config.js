@@ -1,6 +1,5 @@
 const path = require("path");
 module.exports = {
-	// mode: "production",
 	entry: {
 		index: "./lib/index.tsx",
 	},
@@ -18,25 +17,10 @@ module.exports = {
 				test: /\.tsx?$/,
 				loader: "awesome-typescript-loader",
 			},
+			{
+				test: /icons.+\.svg$/,
+				loader: 'svg-sprite-loader',
+			},
 		],
 	},
-	// plugins: [
-	// 	new HtmlWebpackPlugin({
-	// 		template: "index.html",
-	// 	}),
-	// ],
-	// externals: {
-	// 	react: {
-	// 		commonjs: "react",
-	// 		commonjs2: "react",
-	// 		amd: "react",
-	// 		root: "React",
-	// 	},
-	// 	"react-dom": {
-	// 		commonjs: "react-dom",
-	// 		commonjs2: "react-dom",
-	// 		amd: "react-dom",
-	// 		root: "ReactDOM",
-	// 	},
-	// },
 };
