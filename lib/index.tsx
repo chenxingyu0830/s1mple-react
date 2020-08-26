@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDom from 'react-dom'
 import Icon from "./icon"
 
-const fn = () => {
-    console.log('fn');
+const fn: React.MouseEventHandler = (e) => {
+    console.log(e.target);
 }
 
 ReactDom.render(<div>
