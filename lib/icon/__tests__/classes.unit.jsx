@@ -1,4 +1,4 @@
-import classes from "../classes";
+import classes from "../../helpers/classes";
 
 describe("classes", () => {
 	it("接受1个 className", () => {
