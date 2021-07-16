@@ -9,13 +9,3 @@ exports[`icon render successfully 1`] = `
   />
 </svg>
 `;
-
-exports[`icon 是个icon 1`] = `
-<svg
-  className="simple-icon"
->
-  <use
-    xlinkHref="#weChat"
-  />
-</svg>
-`;

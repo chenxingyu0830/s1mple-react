@@ -5401,6 +5401,16 @@ jest-jasmine2@^26.3.0:
     pretty-format "^26.3.0"
     throat "^5.0.0"
 
+jest-junit@^12.2.0:
+  version "12.2.0"
+  resolved "https://registry.nlark.com/jest-junit/download/jest-junit-12.2.0.tgz#cff7f9516e84f8e30f6bdea04cd84db6b095a376"
+  integrity sha1-z/f5UW6E+OMPa96gTNhNtrCVo3Y=
+  dependencies:
+    mkdirp "^1.0.4"
+    strip-ansi "^5.2.0"
+    uuid "^8.3.2"
+    xml "^1.0.1"
+
 jest-leak-detector@^26.3.0:
   version "26.3.0"
   resolved "https://registry.npm.taobao.org/jest-leak-detector/download/jest-leak-detector-26.3.0.tgz?cache=0&sync_timestamp=1597057434986&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjest-leak-detector%2Fdownload%2Fjest-leak-detector-26.3.0.tgz#74c077a243585cc1d2cfd50d231d373100dd6e6f"
@@ -6056,7 +6066,7 @@ mixin-deep@^1.2.0:
     for-in "^1.0.2"
     is-extendable "^1.0.1"
 
-mkdirp@1.x:
+mkdirp@1.x, mkdirp@^1.0.4:
   version "1.0.4"
   resolved "https://registry.npm.taobao.org/mkdirp/download/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
 
@@ -8313,6 +8323,11 @@ uuid@^8.2.0:
   version "8.3.0"
   resolved "https://registry.npm.taobao.org/uuid/download/uuid-8.3.0.tgz?cache=0&sync_timestamp=1595886825323&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fuuid%2Fdownload%2Fuuid-8.3.0.tgz#ab738085ca22dc9a8c92725e459b1d507df5d6ea"
 
+uuid@^8.3.2:
+  version "8.3.2"
+  resolved "https://registry.nlark.com/uuid/download/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
+  integrity sha1-gNW1ztJxu5r2xEXyGhoExgbO++I=
+
 v8-compile-cache@^2.1.1:
   version "2.1.1"
   resolved "https://registry.npm.taobao.org/v8-compile-cache/download/v8-compile-cache-2.1.1.tgz#54bc3cdd43317bca91e35dcaf305b1a7237de745"
@@ -8626,6 +8641,11 @@ ws@^7.2.3:
 xml-name-validator@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npm.taobao.org/xml-name-validator/download/xml-name-validator-3.0.0.tgz#6ae73e06de4d8c6e47f9fb181f78d648ad457c6a"
+
+xml@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/xml/download/xml-1.0.1.tgz#78ba72020029c5bc87b8a81a3cfcd74b4a2fc1e5"
+  integrity sha1-eLpyAgApxbyHuKgaPPzXS0ovweU=
 
 xmlchars@^2.2.0:
   version "2.2.0"
