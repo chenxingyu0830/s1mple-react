@@ -1,6 +1,6 @@
 {
 	"name": "s1mple-react",
-	"version": "0.0.01",
+	"version": "0.0.2",
 	"description": "",
 	"main": "dist/lib/index",
 	"types": "dist/lib/index",
