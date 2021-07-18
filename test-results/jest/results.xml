@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="7" failures="0" time="16.477">
+  <testsuite name="我的第一个测试用例" errors="0" failures="0" skipped="0" timestamp="2021-07-18T16:16:09" time="6.829" tests="1">
+    <testcase classname="我的第一个测试用例 add(1,2) === 3" name="我的第一个测试用例 add(1,2) === 3" time="0.006">
+    </testcase>
+  </testsuite>
+  <testsuite name="classes" errors="0" failures="0" skipped="0" timestamp="2021-07-18T16:16:09" time="7.459" tests="4">
+    <testcase classname="classes 接受1个 className" name="classes 接受1个 className" time="0.003">
+    </testcase>
+    <testcase classname="classes 接受2个 className" name="classes 接受2个 className" time="0">
+    </testcase>
+    <testcase classname="classes className 空值判断" name="classes className 空值判断" time="0">
+    </testcase>
+    <testcase classname="classes 不传className" name="classes 不传className" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="icon" errors="0" failures="0" skipped="0" timestamp="2021-07-18T16:16:09" time="7.837" tests="2">
+    <testcase classname="icon render successfully" name="icon render successfully" time="0.015">
+    </testcase>
+    <testcase classname="icon onClick" name="icon onClick" time="0.043">
+    </testcase>
+  </testsuite>
+</testsuites>
