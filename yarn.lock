@@ -6977,14 +6977,15 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-dom@^17.0.2:
-  version "17.0.2"
-  resolved "https://registry.nlark.com/react-dom/download/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
-  integrity sha1-7P+2hF462Nv83EmPDQqTlzZQLCM=
+react-dom@16.13.1:
+  version "16.13.1"
+  resolved "https://registry.nlark.com/react-dom/download/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
+  integrity sha1-wb03MxoEhsB47lTEdAcgmTsuDn8=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    scheduler "^0.20.2"
+    prop-types "^15.6.2"
+    scheduler "^0.19.1"
 
 react-is@^16.12.0, react-is@^16.13.1, react-is@^16.8.1, react-is@^16.8.6:
   version "16.13.1"
@@ -7009,13 +7010,14 @@ react-test-renderer@^16.13.1:
     react-is "^16.8.6"
     scheduler "^0.19.1"
 
-react@^17.0.2:
-  version "17.0.2"
-  resolved "https://registry.nlark.com/react/download/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
-  integrity sha1-0LXMUW0p6z7uOD91tihkz7aAADc=
+react@16.13.1:
+  version "16.13.1"
+  resolved "https://registry.nlark.com/react/download/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
+  integrity sha1-LoGIIvGpdDEiwGPWQQ2FweOv5I4=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
+    prop-types "^15.6.2"
 
 read-pkg-up@^7.0.1:
   version "7.0.1"
@@ -7369,14 +7371,6 @@ saxes@^5.0.0:
 scheduler@^0.19.1:
   version "0.19.1"
   resolved "https://registry.npm.taobao.org/scheduler/download/scheduler-0.19.1.tgz#4f3e2ed2c1a7d65681f4c854fa8c5a1ccb40f196"
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-
-scheduler@^0.20.2:
-  version "0.20.2"
-  resolved "https://registry.nlark.com/scheduler/download/scheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
-  integrity sha1-S67jlDbjSqk7SHS93L8P6Li1DpE=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
