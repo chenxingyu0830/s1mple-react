@@ -46,11 +46,11 @@ jobs:
           path: test-results
 
   publish:
-  <<: *defaults
-  steps:
-    - attach_workspace:
-        at: .
-    - run: npm publish
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: .
+      - run: npm publish
 
 workflows:
   version: 2
