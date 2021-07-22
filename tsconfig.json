@@ -1,28 +1,11 @@
 {
 	"compilerOptions": {
+		"outDir": "dist",
 		"declaration": true,
 		"baseUrl": ".",
-		"paths": {
-			"utils/*": [
-				"include/utils/*"
-			],
-			"stylesheets": [
-				"stylesheets/"
-			],
-			"examples": [
-				"examples/"
-			]
-		},
-		"rootDirs": [
-			"include"
-		],
-		"outDir": "dist",
 		"module": "esnext",
 		"target": "es5",
-		"lib": [
-			"es6",
-			"dom"
-		],
+		"lib": ["es6", "dom"],
 		"sourceMap": true,
 		"jsx": "react",
 		"moduleResolution": "node",
@@ -35,17 +18,11 @@
 		"strictNullChecks": true,
 		// "suppressImplicitAnyIndexErrors": true,
 		// https://github.com/Microsoft/TypeScript/issues/28762#issuecomment-443406607
-		"allowSyntheticDefaultImports": true,
+		// "allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
 		"noUnusedLocals": true
 	},
-	"include": [
-		"example.tsx",
-		"lib/**/*",
-		"include/**/*",
-		"examples/**/*",
-		"types/**/*",
-		"test/**/*"
-	],
+	"include": ["lib/**/*"],
 	"exclude": [
 		"node_modules",
 		"build",
