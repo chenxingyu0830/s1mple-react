@@ -1,9 +1,15 @@
 function scopedClassMaker(prefix: string) {
-	return function x(name?: string) {
-		return [prefix, name].filter(Boolean).join("-");
-	}
+	return (suffix?: string, ...extra: Array<string | undefined | false>) => {
+		return [[prefix, suffix].filter(Boolean).join("-")]
+			.concat(
+				extra
+					.filter(Boolean) // 过滤 undefined && ''
+					.map(String) // 转成 string[]
+			)
+			.join(" ")
+			.trim();
+	};
 }
-
 
 const isTrusy = (value: any) => value;
 

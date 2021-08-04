@@ -1,0 +1,37 @@
+@import "../global";
+
+.simple-layout {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    color: white;
+
+    &-has-aside {
+        flex-direction: row;
+    }
+
+    &-aside {
+        min-width: 200px;
+        max-width: 200px;
+        background: #3ba0e9;
+    }
+
+    &-header {
+        height: 64px;
+        line-height: 64px;
+        background: #7dbcea;
+    }
+
+    &-content {
+        flex-grow: 1;
+        min-height: 120px;
+        line-height: 120px;
+        background: #108ee9;
+    }
+
+    &-footer {
+        height: 64px;
+        background: #7dbcea;
+    }
+}
