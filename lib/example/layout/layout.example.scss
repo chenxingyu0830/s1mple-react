@@ -1,0 +1,23 @@
+@import "../global";
+
+.doc-layout {
+    .simple-layout {
+        color: white;
+
+        &-aside {
+            background: #3ba0e9;
+        }
+
+        &-header {
+            background: #7dbcea;
+        }
+
+        &-content {
+            background: #108ee9;
+        }
+
+        &-footer {
+            background: #7dbcea;
+        }
+    }
+}

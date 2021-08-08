@@ -1,7 +1,10 @@
 import React, { ReactElement } from "react";
+import "./index.scss";
 import { scopedClassMaker } from "../helpers/index";
 import Aside from "./aside";
-import "./index.scss";
+import Header from "./header";
+import Content from "./content";
+import Footer from "./footer";
 
 const scopedClass = scopedClassMaker("simple-layout");
 const sc = scopedClass;
@@ -20,3 +23,4 @@ const Layout: React.FunctionComponent<LayoutProps> = props => {
 };
 
 export default Layout;
+export { Aside, Header, Content, Footer };

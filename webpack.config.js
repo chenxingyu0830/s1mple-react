@@ -28,12 +28,16 @@ module.exports = {
 				loader: "awesome-typescript-loader",
 			},
 			{
-				test: /icons.+\.svg$/,
+				test: /\.svg$/,
 				loader: 'svg-sprite-loader',
 			},
 			{
 				test: /\.scss$/,
-				use: ['style-loader', 'css-loader', "sass-loader"]
+				use: ['style-loader', 'css-loader', "sass-loader"],
+			},
+			{
+				test: /\.png|jpg|jpeg$/,
+				loader: 'file-loader',
 			}
 		],
 	},

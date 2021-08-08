@@ -1,16 +1,16 @@
 import React from "react";
-import Aside from "./aside";
-import Content from "./content";
-import Footer from "./footer";
-import Header from "./header";
-import Layout from "./layout";
+import Aside from "../../layout/aside";
+import Content from "../../layout/content";
+import Footer from "../../layout/footer";
+import Header from "../../layout/header";
+import Layout from "../../layout/layout";
 
 export default function () {
 	return (
-		<div>
+		<div className="doc-layout">
 			<div>
 				<h1>第一个例子</h1>
-                <Layout>
+				<Layout>
 					<Header>Header</Header>
 					<Content>Content</Content>
 					<Footer>Footer</Footer>
@@ -29,7 +29,7 @@ export default function () {
 			</div>
 			<div>
 				<h1>第三个例子</h1>
-                <Layout>
+				<Layout>
 					<Header>Header</Header>
 					<Layout>
 						<Content>Content</Content>
@@ -40,7 +40,7 @@ export default function () {
 			</div>
 			<div>
 				<h1>第四个例子</h1>
-                <Layout>
+				<Layout>
 					<Aside>Aside</Aside>
 					<Layout>
 						<Header>Header</Header>
