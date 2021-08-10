@@ -38,6 +38,11 @@ module.exports = {
 			{
 				test: /\.png|jpg|jpeg$/,
 				loader: 'file-loader',
+				options: {
+					esModule: false, // TIPS: 这里设置为false - 避免打包png加载失败
+					name: '[name].[ext]',
+					limit: 10240
+				}
 			}
 		],
 	},

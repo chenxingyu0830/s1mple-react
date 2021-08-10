@@ -33,7 +33,7 @@ ReactDOM.render(
 		<Layout className="examples-doc">
 			<Header className="header">
 				<div className="logo">
-					<img src={"./logo.png"} alt="CUI" />
+					<img src={require('./logo.png')} alt="s1mple-ui" />
 				</div>
 			</Header>
 			<Layout className="body">
@@ -53,7 +53,9 @@ ReactDOM.render(
 					))}
 				</Content>
 			</Layout>
-			<Footer>footer</Footer>
+			<Footer className="footer">
+				123
+			</Footer>
 		</Layout>
 	</Router>,
 	document.querySelector("#root")
