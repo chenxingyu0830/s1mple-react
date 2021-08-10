@@ -1,6 +1,6 @@
 import React from "react";
 import "./importAllIcons";
-import {classes} from "../helpers/index";
+import { classes } from "../helpers/index";
 
 import "./icon.scss";
 

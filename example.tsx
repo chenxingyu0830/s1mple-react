@@ -4,6 +4,7 @@ import { HashRouter as Router, Route, NavLink } from "react-router-dom";
 import Layout, { Header, Aside, Content, Footer } from "./lib/layout/layout";
 import * as Example from "./lib/example/index";
 import "./example.scss";
+import Icon from "./lib/icon/icon";
 
 const ROUTERS = [
 	{
@@ -35,6 +36,10 @@ ReactDOM.render(
 				<div className="logo">
 					<img src={require('./logo.png')} alt="s1mple-ui" />
 				</div>
+				<nav className="icon-container" onClick={e => window.open("https://github.com/chenxingyu0830")}>
+					<Icon name="github" />
+					<span>github</span>
+				</nav>
 			</Header>
 			<Layout className="body">
 				<Aside className="aside">
@@ -54,7 +59,14 @@ ReactDOM.render(
 				</Content>
 			</Layout>
 			<Footer className="footer">
-				123
+				<nav className="icon-container" onClick={e => window.open("https://github.com/chenxingyu0830")}>
+					<Icon name="github" />
+					<span>github</span>
+				</nav>
+				<nav className="icon-container" onClick={e => window.open("https://github.com/chenxingyu0830/s1mple-react")}>
+					<Icon name="react" />
+					<span>项目地址</span>
+				</nav>
 			</Footer>
 		</Layout>
 	</Router>,
