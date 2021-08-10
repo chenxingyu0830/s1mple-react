@@ -10,20 +10,12 @@
         flex-direction: row;
     }
 
-    &-aside {
-        min-width: 200px;
-        max-width: 200px;
-    }
-
     &-header,
     &-footer {
         height: 64px;
-        line-height: 64px;
     }
 
     &-content {
         flex-grow: 1;
-        min-height: 120px;
-        line-height: 120px;
     }
 }

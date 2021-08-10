@@ -3,14 +3,13 @@ $primary_hover_background: #e0f2ff;
 $dark_primary: #1890ff;
 $text_grey: #000000D9;
 $text_dark_grey: #333333;
-$border_grey: #eaeaea;
+$border_grey: rgba(0, 0, 0, 0.15);
 $grey_background: #f2f4f5;
 
 * {
     margin: 0;
     padding: 0;
     list-style: none;
-    border: none;
 }
 
 *::after {
@@ -95,7 +94,7 @@ p {
             min-width: 200px;
             height: 100%;
             overflow-y: auto;
-            border-right: 1px solid #eaeaea;
+            border-right: 1px solid $border_grey;
 
             p.menu-title {
                 padding-left: 40px;
@@ -155,6 +154,68 @@ p {
             &-footer {
                 background: #7dbcea;
             }
+        }
+    }
+
+    .demo-box {
+        width: 100%;
+        margin-bottom: 8px;
+        box-sizing: border-box;
+        border: 1px solid $border_grey;
+        border-radius: 2px;
+        display: flex;
+        flex-direction: column;
+
+        >.demo-demo {
+            padding: 28px 24px;
+        }
+
+        >.demo-intro {
+            border-top: 1px solid $border_grey;
+            padding: 0 24px;
+            margin-bottom: 20px;
+
+            >h4 {
+                display: inline-block;
+                font-weight: 500;
+                padding: 0 8px;
+                transform: translateY(-50%);
+                background-color: white;
+            }
+        }
+
+        >.demo-buttons {
+            padding: 14px 24px;
+            border-top: 1px $border_grey dashed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        >.demo-code {
+            pre {
+                border-top: 1px $border_grey dashed;
+                white-space: pre-wrap;
+                margin: 0;
+                padding: 24px;
+                background-color: white;
+            }
+        }
+    }
+
+    .attrs-table {
+        width: 100%;
+        border: 1px solid $border_grey;
+
+        >thead th,
+        >tbody td {
+            padding: 10px 12px;
+        }
+
+        >thead {
+            text-align: left;
+            background-color: $grey_background;
+            white-space: nowrap;
         }
     }
 }
