@@ -28,7 +28,7 @@ const IconExample: React.FunctionComponent = () => {
     ];
 
     return (
-        <section className="markdown">
+        <section className="markdown doc-icon">
             <h1 className="markdown-title">Icon 图标</h1>
             <div className="markdown-describe">
                 <h2>描述说明</h2>

@@ -28,6 +28,18 @@ $grey_background: #f2f4f5;
 		}
 	}
 
+	&.doc-icon {
+		[class^="icon-demo-"] {
+			svg {
+				margin-left: 8px;
+			}
+		}
+		.button-demo-2 {
+			padding: 10px;
+			background-color: #eeeeee;
+		}
+	}
+
 	&.doc-button {
 		[class^="button-demo-"] {
 			li + li {
