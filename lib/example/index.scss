@@ -18,34 +18,18 @@ $grey_background: #f2f4f5;
 		margin-top: 8px;
 	}
 
-	div.markdown-describe,
-	div.markdown-demos,
-	div.markdown-attrs {
+	> div {
 		margin: 20px 0;
 
 		> h2 {
-			margin-bottom: 10px;
+			margin-top: 40px;
+			margin-bottom: 15px;
 		}
 	}
 
 	&.doc-icon {
 		[class^="icon-demo-"] {
 			svg {
-				margin-left: 8px;
-			}
-		}
-		.button-demo-2 {
-			padding: 10px;
-			background-color: #eeeeee;
-		}
-	}
-
-	&.doc-button {
-		[class^="button-demo-"] {
-			li + li {
-				margin-top: 8px;
-			}
-			.simple-button + .simple-button {
 				margin-left: 8px;
 			}
 		}
@@ -82,6 +66,21 @@ $grey_background: #f2f4f5;
 				line-height: 120px;
 				background: #3ba0e9;
 			}
+		}
+	}
+
+	&.doc-button {
+		[class^="button-demo-"] {
+			li + li {
+				margin-top: 8px;
+			}
+			.simple-button + .simple-button {
+				margin-left: 8px;
+			}
+		}
+		.button-demo-2 {
+			padding: 10px;
+			background-color: #eeeeee;
 		}
 	}
 }

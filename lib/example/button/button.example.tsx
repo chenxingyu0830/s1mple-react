@@ -55,17 +55,17 @@ const ButtonExample: React.FunctionComponent = () => {
     return (
         <section className="markdown doc-button">
             <h1 className="markdown-title">Button 按钮</h1>
-            <div className="markdown-describe">
+            <div>
                 <h2>描述说明</h2>
                 <p>按钮用来触发一些操作。</p>
             </div>
-            <div className="markdown-demos">
+            <div>
                 <h2>代码演示</h2>
                 {demos.map((demo, idx) => (
                     <Demo key={idx} {...demo} />
                 ))}
             </div>
-            <div className="markdown-attrs">
+            <div>
                 <h2>属性</h2>
                 {createAttrTable(attrs)}
             </div>

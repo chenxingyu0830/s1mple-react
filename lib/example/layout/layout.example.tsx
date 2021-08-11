@@ -26,17 +26,17 @@ const IconExample: React.FunctionComponent = () => {
     return (
         <section className="markdown doc-layout">
             <h1 className="markdown-title">Icon 图标</h1>
-            <div className="markdown-describe">
+            <div>
                 <h2>描述说明</h2>
                 <p>协助进行页面级整体布局。</p>
             </div>
-            <div className="markdown-demos">
+            <div>
                 <h2>代码演示</h2>
                 {demos.map((demo, idx) => (
                     <Demo key={idx} {...demo} />
                 ))}
             </div>
-            <div className="markdown-attrs">
+            <div>
                 <h2>属性</h2>
                 {createAttrTable(attrs)}
             </div>
