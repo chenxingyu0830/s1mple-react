@@ -20,6 +20,10 @@ const IconExample: React.FunctionComponent = () => {
             name: 'className',
             intro: '自定义类名',
             type: 'string',
+        }, {
+            name: 'color',
+            intro: '图标颜色',
+            type: 'string',
         }
     ];
 
