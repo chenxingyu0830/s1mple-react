@@ -1,22 +1,45 @@
+$primary: #2f9cd9;
+$primary_hover_background: #e0f2ff;
+$dark_primary: #1b89d1;
+$text_grey: #999999;
+$text_dark_grey: #333333;
+$border_grey: #eaeaea;
+$grey_background: #f2f4f5;
+
 .markdown {
-    padding: 20px;
-    margin: 0 150px;
+	padding: 20px;
+	margin: 0 150px;
 
-    h2 {
-        font-weight: 500;
-    }
+	h2 {
+		font-weight: 500;
+	}
 
-    h1.markdown-title {
-        margin-top: 8px;
-    }
+	h1.markdown-title {
+		margin-top: 8px;
+	}
 
-    div.markdown-describe,
-    div.markdown-demos,
-    div.markdown-attrs {
-        margin: 20px 0;
+	div.markdown-describe,
+	div.markdown-demos,
+	div.markdown-attrs {
+		margin: 20px 0;
 
-        >h2 {
-            margin-bottom: 10px;
-        }
-    }
+		> h2 {
+			margin-bottom: 10px;
+		}
+	}
+
+	&.doc-button {
+		[class^="button-demo-"] {
+			li + li {
+				margin-top: 8px;
+			}
+			.cui-button + .cui-button {
+				margin-left: 8px;
+			}
+		}
+		.button-demo-2 {
+			padding: 10px;
+			background-color: #eeeeee;
+		}
+	}
 }

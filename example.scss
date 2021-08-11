@@ -234,6 +234,33 @@ p {
 		}
 	}
 
+	.rmd {
+		blockquote {
+		  margin: 1em 0;
+		  padding-left: .8em;
+		  color: #697b8c;
+		  font-size: 90%;
+		  border-left: 4px solid #ebedf0;
+		}
+		p, li { line-height: 1.8em; }
+		&.rmd2 {
+		  p { margin: 8px 0; }
+		  li { list-style: circle; margin-left: 22px; }
+		}
+		a { color: $primary; margin: 0 4px; }
+		code {
+		  display: inline-block;
+		  font-family: Consolas,monospace,serif;
+		  font-size: 90%;
+		  line-height: 1.2em;
+		  padding: 2px 4px;
+		  margin: 0 4px;
+		  border-radius: 3px;
+		  background-color: #f2f4f5;
+		  transform: translateY(-1px);
+		}
+	  }
+
 	.icon-container {
 		display: inline-flex;
 		align-items: center;

@@ -12,11 +12,11 @@ const ROUTERS = [
 		name: "Icon 图标",
 		component: Example.Icon,
 	},
-	// {
-	// 	key: "button",
-	// 	name: "Button 按钮",
-	// 	component: Example.Button,
-	// },
+	{
+		key: "button",
+		name: "Button 按钮",
+		component: Example.Button,
+	},
 	{
 		key: "dialog",
 		name: "Dialog 对话框",
