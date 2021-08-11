@@ -1,54 +1,47 @@
 import React from "react";
-import Aside from "../../layout/aside";
-import Content from "../../layout/content";
-import Footer from "../../layout/footer";
-import Header from "../../layout/header";
-import Layout from "../../layout/layout";
+import { AttrProps, createAttrTable, Demo, DemoProps } from "../common";
+import LayoutDemo1 from "./layout.demo1";
 
-export default function () {
-	return (
-		<div className="doc-layout">
-			<div>
-				<h1>第一个例子</h1>
-				<Layout>
-					<Header>Header</Header>
-					<Content>Content</Content>
-					<Footer>Footer</Footer>
-				</Layout>
-			</div>
-			<div>
-				<h1>第二个例子</h1>
-				<Layout>
-					<Header>Header</Header>
-					<Layout>
-						<Aside>Aside</Aside>
-						<Content>Content</Content>
-					</Layout>
-					<Footer>Footer</Footer>
-				</Layout>
-			</div>
-			<div>
-				<h1>第三个例子</h1>
-				<Layout>
-					<Header>Header</Header>
-					<Layout>
-						<Content>Content</Content>
-						<Aside>Aside</Aside>
-					</Layout>
-					<Footer>Footer</Footer>
-				</Layout>
-			</div>
-			<div>
-				<h1>第四个例子</h1>
-				<Layout>
-					<Aside>Aside</Aside>
-					<Layout>
-						<Header>Header</Header>
-						<Content>Content</Content>
-						<Footer>Footer</Footer>
-					</Layout>
-				</Layout>
-			</div>
-		</div>
-	);
+const IconExample: React.FunctionComponent = () => {
+    const demos: DemoProps[] = [
+        {
+            code: require('!!raw-loader!./layout.demo1.tsx').default,
+            demo: <LayoutDemo1 />,
+            title: '基本用法',
+            intro: `典型的页面布局。`
+        }
+    ];
+    const attrs: AttrProps[] = [
+		{
+			name: 'className',
+			intro: '容器\`className\`',
+			type: 'string'
+		  }, {
+			name: 'style',
+			intro: '指定样式',
+			type: 'CSSProperties'
+		  },
+    ];
+
+    return (
+        <section className="markdown doc-layout">
+            <h1 className="markdown-title">Icon 图标</h1>
+            <div className="markdown-describe">
+                <h2>描述说明</h2>
+                <p>协助进行页面级整体布局。</p>
+            </div>
+            <div className="markdown-demos">
+                <h2>代码演示</h2>
+                {demos.map((demo, idx) => (
+                    <Demo key={idx} {...demo} />
+                ))}
+            </div>
+            <div className="markdown-attrs">
+                <h2>属性</h2>
+                {createAttrTable(attrs)}
+            </div>
+        </section>
+    )
 }
+
+export default IconExample;

@@ -33,13 +33,43 @@ $grey_background: #f2f4f5;
 			li + li {
 				margin-top: 8px;
 			}
-			.cui-button + .cui-button {
+			.simple-button + .simple-button {
 				margin-left: 8px;
 			}
 		}
 		.button-demo-2 {
 			padding: 10px;
 			background-color: #eeeeee;
+		}
+	}
+
+	&.doc-layout {
+		.layout-demo-1 {
+			.simple-layout + .simple-layout {
+				margin-top: 20px;
+			}
+			.simple-layout-header,
+			.simple-layout-aside,
+			.simple-layout-content,
+			.simple-layout-footer {
+				color: #fff;
+				text-align: center;
+			}
+			.simple-layout-header,
+			.simple-layout-footer {
+				background: #7dbcea;
+			}
+			.simple-layout-content {
+				background: #108ee9;
+				min-height: 120px;
+				line-height: 120px;
+			}
+			.simple-layout-aside {
+				width: 30%;
+				max-width: 300px;
+				line-height: 120px;
+				background: #3ba0e9;
+			}
 		}
 	}
 }
