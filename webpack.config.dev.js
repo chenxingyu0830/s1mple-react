@@ -10,6 +10,7 @@ module.exports = Object.assign({}, base, {
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: "index.html",
+			favicon: "./favicon.ico"
 		}),
 	],
 });
