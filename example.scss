@@ -83,10 +83,14 @@ p {
 		color: inherit;
 	}
 
+	.row {
+		display: flex;
+		flex-direction: row;
+	}
+
 	.header {
 		box-shadow: 0 1px 10px 1px #f0f0f0;
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
 		padding: 0 40px;
 
@@ -97,6 +101,35 @@ p {
 
 			> img {
 				height: 50px;
+			}
+		}
+
+		> .header-container {
+			display: flex;
+			flex:1;
+			justify-content: flex-end;
+			
+			> nav {
+				margin-left: 40px;
+			}
+		}
+
+		.sub-menu > .menu-item {
+			display: flex;
+
+			> a {
+				margin-left: 40px;
+				transition: all 0.2s;
+
+				&:hover {
+					color: $primary;
+				}
+
+				&.active {
+					color: $primary;
+					font-weight: 500;
+					border-bottom: 3px solid $dark_primary;
+				}
 			}
 		}
 	}

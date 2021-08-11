@@ -18,12 +18,26 @@ $grey_background: #f2f4f5;
 		margin-top: 8px;
 	}
 
+	p {
+		padding: 16px 0;
+	}
+
+	pre {
+		padding: 16px;
+		overflow: auto;
+		font-size: 1.2em;
+		font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+		line-height: 1.5em;
+		background-color: #f6f8fa;
+		border-radius: 3px;
+	}
+
 	> div {
 		margin: 20px 0;
 
 		> h2 {
 			margin-top: 40px;
-			margin-bottom: 15px;
+			margin-bottom: 20px;
 		}
 	}
 

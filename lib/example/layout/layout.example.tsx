@@ -25,7 +25,7 @@ const IconExample: React.FunctionComponent = () => {
 
     return (
         <section className="markdown doc-layout">
-            <h1 className="markdown-title">Icon 图标</h1>
+            <h1 className="markdown-title">Layout 布局</h1>
             <div>
                 <h2>描述说明</h2>
                 <p>协助进行页面级整体布局。</p>
