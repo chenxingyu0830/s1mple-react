@@ -13,6 +13,11 @@ const ROUTERS = [
 		component: Example.Icon,
 	},
 	{
+		key: "layout",
+		name: "Layout 布局",
+		component: Example.Layout,
+	},
+	{
 		key: "button",
 		name: "Button 按钮",
 		component: Example.Button,
@@ -21,11 +26,6 @@ const ROUTERS = [
 		key: "dialog",
 		name: "Dialog 对话框",
 		component: Example.Dialog,
-	},
-	{
-		key: "layout",
-		name: "Layout 布局",
-		component: Example.Layout,
 	},
 ];
 

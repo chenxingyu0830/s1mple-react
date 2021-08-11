@@ -84,4 +84,4 @@ const createAttrTable = (attributes: AttrProps[]): ReactNode => {
     );
 };
 
-export { Demo, createAttrTable };
+export { Demo, createAttrTable, createMarkdown };

@@ -1,0 +1,51 @@
+@import '../global.scss';
+
+$horizontal-padding: 24px;
+$vertical-padding: 20px;
+
+.simple-dialog {
+  position: fixed;
+  width: 440px;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  &-close {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    position: absolute;
+    top: $vertical-padding;
+    right: $vertical-padding;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 4px;
+    margin: 0;
+    background: transparent;
+    > .simple-icon {
+      fill: $text_color;
+      transition: all 0.2s;
+    }
+    &:hover > .simple-icon {
+      fill: $primary;
+    }
+  }
+  &-header {
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: $vertical-padding $horizontal-padding 2px;
+  }
+  &-body {
+    padding: 24px $horizontal-padding;
+  }
+  &-footer {
+    padding: 2px $horizontal-padding $vertical-padding;
+    text-align: right;
+    .simple-button + .simple-button {
+      margin-left: 8px;
+    }
+  }
+  &-mask { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: fade_out(black, 0.4); }
+}

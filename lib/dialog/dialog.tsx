@@ -1,107 +1,125 @@
-import React, { ReactElement, ReactNode } from "react";
-import ReactDOM from "react-dom";
+import React, {Fragment, ReactNode} from 'react';
+import ReactDOM from 'react-dom';
+import {Icon, Button} from '../index';
+import {scopedClassMaker} from '../helpers';
 
-import { Icon } from "../index";
-import { scopedClassMaker } from "../helpers/index";
-
-import "./dialog.scss";
+import './index.scss';
 
 interface DialogProps {
-	visible: boolean;
-	buttons?: Array<ReactElement>;
-	onClose: React.MouseEventHandler;
-	closeOnClickMask?: boolean;
+  visible?: boolean;
+  onOk?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onCancel?: (e: React.MouseEvent<HTMLElement>) => void;
+  title?: string | ReactNode;
+  footer?: null | ReactNode;
+  maskCloseable?: boolean;
+  closeable?: boolean;
 }
+
+interface DialogApis {
+  alert(contentOrProps: DialogAlertProps, title?: string): void;
+  confirm(props: DialogFuncProps): void;
+}
+
+type Dialog = React.FunctionComponent<DialogProps> & DialogApis
 
 const scopedClass = scopedClassMaker("simple-dialog");
 const sc = scopedClass;
 
-const Dialog: React.FunctionComponent<DialogProps> = props => {
-	const onClickClose: React.MouseEventHandler = e => {
-		props.onClose(e);
-	};
-
-	const onClickMask: React.MouseEventHandler = e => {
-		if (props.closeOnClickMask) {
-			props.onClose(e);
-		}
-	};
-
-	const modal = props.visible ? (
-		<>
-			<div className={sc("mask")} onClick={onClickMask}></div>
-			<div className={sc()}>
-				<div className={sc("close")} onClick={onClickClose}>
-					<Icon name="close" />
-				</div>
-				<header className={sc("header")}>提示</header>
-				<main className={sc("main")}>{props.children}</main>
-				{props.buttons && props.buttons.length > 0 && (
-					<footer className={sc("footer")}>
-						{props.buttons?.map((it, idx) =>
-							React.cloneElement(it, { key: idx })
-						)}
-					</footer>
-				)}
-			</div>
-		</>
-	) : null;
-
-	return ReactDOM.createPortal(modal, document.body);
+const Dialog: Dialog = (props) => {
+  const dialogComponent = (
+    props.visible ?
+      <Fragment>
+        <div className={sc('mask')}
+             onClick={(e) => props.maskCloseable ? props.onCancel && props.onCancel(e) : null}/>
+        <div className={sc('')}>
+          {props.closeable ?
+            <button onClick={props.onCancel} className={sc('close')}><Icon name="close"/></button> : null}
+          {
+            !!props.title ? <header className={sc('header')}>{props.title}</header> : null
+          }
+          <main className={sc('body')}>
+            {props.children}
+          </main>
+          {
+            props.footer === null ? null : (
+              <footer className={sc('footer')}>
+                {
+                  !!props.footer ? props.footer :
+                    <Fragment>
+                      <Button onClick={props.onCancel}>取消</Button>
+                      <Button theme="primary" onClick={props.onOk}>确定</Button>
+                    </Fragment>
+                }
+              </footer>)
+          }
+        </div>
+      </Fragment>
+      : null
+  );
+  return ReactDOM.createPortal(dialogComponent, document.body);
 };
 
 Dialog.defaultProps = {
-	closeOnClickMask: false,
+  closeable: true,
+  maskCloseable: true,
 };
 
-const modal = (
-	content: ReactNode,
-	buttons?: Array<ReactElement>,
-	afterClose?: () => void
-) => {
-	const onClose = () => {
-		ReactDOM.render(React.cloneElement(component, { visible: false }), div);
-		ReactDOM.unmountComponentAtNode(div);
-		div.remove();
-	};
-	const component = (
-		<Dialog
-			visible={true}
-			onClose={_ => {
-				onClose();
-				afterClose && afterClose();
-			}}
-			buttons={buttons}
-		>
-			{content}
-		</Dialog>
-	);
-	const div = document.createElement("div");
-	document.body.appendChild(div);
-	ReactDOM.render(component, div);
-	return onClose;
+interface DialogFuncProps {
+  content: ReactNode;
+  title?: string;
+  onOk?: (callback: () => void) => void;
+  onCancel?: (callback: () => void) => void;
+  confirmButtonText?: string;
+  cancelButtonText?: string;
+  // TODO: confirmButtonProps & cancelButtonProps
+}
+
+type DialogAlertProps = string | DialogFuncProps
+
+Dialog.alert = (contentOrProps: DialogAlertProps, title?: string) => createDialog('alert', Object.assign({}, contentOrProps, {
+  //重新赋值props
+  content: typeof contentOrProps === 'string' ? contentOrProps : contentOrProps.content,
+  title: typeof contentOrProps === 'string' ? title : contentOrProps.title
+}));
+
+Dialog.confirm = (props: DialogFuncProps) => createDialog('confirm', props);
+
+const createDialog = (type: string, props: DialogFuncProps) => {
+  const div = document.createElement('div');
+  document.body.appendChild(div);
+
+  const removeDialog = () => {
+    ReactDOM.render(React.cloneElement(component, {visible: false}), div);
+    ReactDOM.unmountComponentAtNode(div);
+    div.remove();
+  };
+
+  const confirmButton = (
+    <Button
+      autoFocus={true}
+      theme="primary"
+      onClick={() => {props.onOk ? props.onOk(removeDialog) : removeDialog();}}
+    >
+      {props.confirmButtonText ? props.confirmButtonText : '确定'}
+    </Button>);
+  const footer = type === 'confirm' ?
+    (<Fragment>
+        <Button onClick={() => {
+          props.onCancel ? props.onCancel(removeDialog) : removeDialog();
+        }}>
+          {props.cancelButtonText ? props.cancelButtonText : '取消'}
+        </Button>
+        {confirmButton}
+      </Fragment>
+    ) : confirmButton;
+
+  const component = (
+    <Dialog visible={true} title={props.title} closeable={false} maskCloseable={false}
+            footer={footer}>
+      {props.content}
+    </Dialog>
+  );
+  ReactDOM.render(component, div);
 };
 
-const alert = (content: string) => {
-	const button = <button onClick={() => close()}>OK</button>;
-	const close = modal(content, [button]);
-};
-
-const confirm = (content: string, yes?: () => void, no?: () => void) => {
-	const onYes = () => {
-		close();
-		yes && yes();
-	};
-	const onNo = () => {
-		close();
-		no && no();
-	};
-	const buttons = [
-		<button onClick={onYes}>yes</button>,
-		<button onClick={onNo}>no</button>,
-	];
-	const close = modal(content, buttons, no);
-};
-
-export { alert, confirm, modal };
 export default Dialog;
