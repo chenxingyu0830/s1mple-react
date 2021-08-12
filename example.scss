@@ -99,16 +99,16 @@ p {
 			align-items: center;
 			height: 64px;
 
-			> img {
+			img {
 				height: 50px;
 			}
 		}
 
 		> .header-container {
 			display: flex;
-			flex:1;
+			flex: 1;
 			justify-content: flex-end;
-			
+
 			> nav {
 				margin-left: 40px;
 			}

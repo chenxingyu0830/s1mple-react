@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { HashRouter as Router, Route, NavLink } from "react-router-dom";
+import { HashRouter as Router, Route, Link, NavLink } from "react-router-dom";
 import Layout, { Header, Aside, Content, Footer } from "./lib/layout/layout";
 import * as Doc from "./lib/doc/index";
 import * as Example from "./lib/example/index";
@@ -58,9 +58,9 @@ ReactDOM.render(
 	<Router>
 		<Layout className="examples-doc">
 			<Header className="header">
-				<div className="logo">
+				<Link className="logo" to="/intro" >
 					<img src={require("./logo.png")} alt="s1mple-react" />
-				</div>
+				</Link>
 				<div className="header-container">
 					<ul className="sub-menu row">
 						{PAGES.map(page => (
